@@ -4,6 +4,3 @@
 
 ### Ignore node_modules Folder ###
 vendor/
-
-### Ignore Fonts Folder ###
-fonts/
