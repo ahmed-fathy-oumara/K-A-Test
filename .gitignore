@@ -1,0 +1,12 @@
+# Created by https://www.toptal.com/developers/gitignore/api/django
+# Edit at https://www.toptal.com/developers/gitignore?templates=django
+
+
+### Ignore node_modules Folder ###
+vendor/
+
+### Ignore Media Folder ###
+img/
+
+### Ignore Media Folder ###
+fonts/
