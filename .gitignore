@@ -5,8 +5,5 @@
 ### Ignore node_modules Folder ###
 vendor/
 
-### Ignore Media Folder ###
-img/
-
-### Ignore Media Folder ###
+### Ignore Fonts Folder ###
 fonts/
