@@ -25,37 +25,43 @@
       <!-- Navbar-->
       <header class="navbar navbar-expand-lg navbar-dark fixed-top px-md-5" data-scroll-header>
         <div class="container px-3">
+          
+          <!-- Brand Logo -->
           <a class="navbar-brand me-3 me-xl-4" href="#">
-            <img class="d-block" src="img/logo/Metronics-logo-light.png" width="116" alt="Finder">
+            <img class="d-block" src="img/logo/Metronics-logo-light.png" width="116" alt="Logo">
           </a>
-          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+          <!-- Burger Button -->
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           
           <!-- Search -->
-          <a href="#" class="btn btn-icon btn-md ms-1 order-lg-3">
+          <a href="#" class="btn btn-icon btn-md text-light pt-2 ms-1 d-none d-lg-block order-lg-3">
             <i class="fi-search"></i>
           </a>
           
           <!-- Engagements -->
-          <a href="#" class="btn btn-icon btn-md ms-1 order-lg-3">
+          <a href="#" class="btn btn-icon btn-md text-light pt-2 ms-1 d-none d-lg-block order-lg-3">
             <i class="fi-star"></i>
           </a>
-
+          
           <!-- Messages -->
-          <a href="#" class="btn btn-icon btn-md ms-1 order-lg-3">
+          <a href="#" class="btn btn-icon btn-md text-light pt-2 ms-1 d-none d-lg-block order-lg-3">
             <i class="fi-mail"></i>
           </a>
-
+          
           <!-- Notifications -->
-          <a href="#" class="btn btn-icon btn-md ms-1 order-lg-3">
+          <a href="#" class="btn btn-icon btn-md text-light pt-2 ms-1 d-none d-lg-block order-lg-3">
             <i class="fi-bell"></i>
           </a>
-
+          
           <!--Profile Dropdown-->
-          <div class="dropdown order-lg-3 my-n2 ms-2">
+          <div class="dropdown my-n2 ms-2 d-none d-lg-block order-lg-3">
             <a class="d-block py-2 ms-2" href="#">
               <img class="rounded-1" src="img/avatars/01.jpg" width="30" alt="Annette Black">
             </a>
-
+            
             <div class="dropdown-menu dropdown-menu-end">
               <div class="d-flex align-items-start border-bottom px-3 py-1 mb-2" style="width: 16rem;">
                 <img class="rounded-2" src="img/avatars/01.jpg" width="48" alt="Max Smith">
@@ -77,7 +83,35 @@
           
           <!--Collapsed Menu -->
           <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+            <!-- Search visible on mobile -->
+            <div class="d-lg-none bg-dark mx-n3 px-3 mt-4">
+              <form class="form-group form-group-light w-100" action="#">
+                <div class="input-group input-group-sm"><span class="input-group-text"> <i class="fi-search"></i></span>
+                  <input class="form-control" type="text" name="keyword" placeholder="Search site...">
+                </div>
+                <button class="btn btn-primary btn-icon btn-sm" type="submit"><i class="fi-search"></i></button>
+              </form>
+            </div>
             <ul class="navbar-nav navbar-nav-scroll" style="max-height: 35rem;">
+              <!-- Right side items-->
+              <li class="nav-item dropdown d-lg-none">
+                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img class="rounded-circle me-2" src="img/avatars/01.jpg" width="30" alt="User Full Name">Max Smith<span class="badge bg-faded-success fw-bold ms-2">Pro</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-dark">
+                  <a class="dropdown-item" href="#"><i class="fi-bell me-2"></i>Notifications</a>
+                  <a class="dropdown-item" href="#"><i class="fi-mail me-2"></i>Messages</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><i class="fi-user me-2"></i>My Profile</a>
+                  <a class="dropdown-item" href="#"><i class="fi-briefcase me-2"></i>My Projects</a>
+                  <a class="dropdown-item" href="#"><i class="fi-cash me-2"></i>My Subscription</a>
+                  <a class="dropdown-item" href="#"><i class="fi-bookmark me-2"></i>My Statements</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#"><i class="fi-flag me-2"></i>Language</a>
+                  <a class="dropdown-item" href="#"><i class="fi-settings me-2"></i>Settings</a>
+                  <a class="dropdown-item" href="#"><i class="fi-logout me-2"></i>Sign Out</a>
+                </div>
+              </li>
               <!-- Menu items-->
               <li class="nav-item"><a class="nav-link active" href="#" role="button">Dashboards</a></li>
               <li class="nav-item"><a class="nav-link" href="#" role="button">Pages</a></li>
@@ -85,6 +119,7 @@
               <li class="nav-item"><a class="nav-link" href="#" role="button">Help</a></li>
             </ul>
           </div>
+
         </div>
       </header>
 
@@ -128,7 +163,7 @@
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between mb-3">
                     <div>
-                      <h3 class="h6 card-title mb-0"><a class="text-nav stretched-link text-decoration-none" href="#">Trends</a></h3>
+                      <h3 class="h6 card-title mb-0"><a class="text-nav text-decoration-none" href="#">Trends</a></h3>
                       <p class="fs-sm fw-bold opacity-70 mb-0">Latest Trends</p>
                     </div>
                     <button type="button" class="btn btn-icon btn-sm">
@@ -207,7 +242,6 @@
                     <span class="img-gradient-overlay"></span>
                     <div class="card-body content-overlay pb-0">
                       <h3 class="h5">Company</h3>
-                      <!-- <span class="badge bg-info fs-sm">New</span> -->
                     </div>
                   </div>
                 </div>
@@ -217,7 +251,7 @@
                     <div class="card-body">
                       <div class="d-flex align-items-center justify-content-between py-4">
                         <div>
-                          <h3 class="h5 card-title mb-2"><a class="text-nav stretched-link text-decoration-none" href="#">Create CRM Reports</a></h3>
+                          <h3 class="h5 card-title mb-2"><a class="text-nav text-decoration-none" href="#">Create CRM Reports</a></h3>
                           <p class="fs-sm fw-bold opacity-70 mb-0">Generate the latest CRM report for company projects</p>
                         </div>
                         <!-- Light solid button -->
@@ -257,7 +291,7 @@
                           <h3 class="text-light px-0 mb-3">
                             <i class="fi-flame"></i>
                           </h3>
-                          <a href="#" class="stretched-link text-decoration-none">
+                          <a href="#" class="text-decoration-none">
                             <h3 class="h4 text-light my-0">790</h3>
                             <h6 class="fs-sm text-light mb-0 pb-0">New Products</h6>
                           </a>
@@ -271,7 +305,7 @@
                         <h3 class="text-primary px-0 mb-3">
                           <i class="fi-users"></i>
                         </h3>
-                        <a href="#" class="stretched-link text-decoration-none">
+                        <a href="#" class="text-decoration-none">
                           <h3 class="h4 opacity-90 my-0">8,600</h3>
                           <h6 class="fs-sm opacity-70 mb-0 pb-0">New Customers</h6>
                         </a>
@@ -299,7 +333,7 @@
           </div>
 
           <!-- Grid-->
-          <div class="row g-2 g-md-4 mt-3">
+          <div class="row g-2 g-md-4 mt-1">
             <!-- First Column -->
             <div class="col-md-6 col-lg-4">
 
@@ -326,7 +360,7 @@
                             <div class="icon-box-media bg-faded-warning text-warning mb-1">
                               <i class="fi-house-chosen"></i>
                             </div>
-                            <a class="stretched-link btn btn-link px-0 text-warning fs-sm" href="#">Weekly Sales</a>
+                            <a class= "btn btn-link px-0 text-warning fs-sm" href="#">Weekly Sales</a>
                           </div>
                         </div>
                       </div>
@@ -337,7 +371,7 @@
                             <div class="icon-box-media bg-faded-info text-info mb-1">
                               <i class="fi-house-chosen"></i>
                             </div>
-                            <a class="stretched-link btn btn-link px-0 text-info fs-sm" href="#">New Projects</a>
+                            <a class= "btn btn-link px-0 text-info fs-sm" href="#">New Projects</a>
                           </div>
                         </div>
                       </div>
@@ -348,7 +382,7 @@
                             <div class="icon-box-media bg-faded-danger text-danger mb-1">
                               <i class="fi-house-chosen"></i>
                             </div>
-                            <a class="stretched-link btn btn-link px-0 text-danger fs-sm" href="#">Best Sellers</a>
+                            <a class= "btn btn-link px-0 text-danger fs-sm" href="#">Best Sellers</a>
                           </div>
                         </div>
                       </div>
@@ -359,7 +393,7 @@
                             <div class="icon-box-media bg-faded-success text-success mb-1">
                               <i class="fi-house-chosen"></i>
                             </div>
-                            <a class="stretched-link btn btn-link px-0 text-success fs-sm" href="#">Orders History</a>
+                            <a class= "btn btn-link px-0 text-success fs-sm" href="#">Orders History</a>
                           </div>
                         </div>
                       </div>
@@ -375,7 +409,7 @@
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between mb-3">
                     <div>
-                      <h3 class="h6 card-title mb-0"><a class="text-nav stretched-link text-decoration-none" href="#">Activities</a></h3>
+                      <h3 class="h6 card-title mb-0"><a class="text-nav text-decoration-none" href="#">Activities</a></h3>
                       <p class="fs-sm fw-bold opacity-70 mb-0">890,344 Sales</p>
                     </div>
                     <button type="button" class="btn btn-icon btn-sm">
@@ -441,17 +475,17 @@
             <!-- Third Column -->
             <div class="col-md-6 col-lg-4">
               <div class="card bg-light shadow-sm card-hover mb-4">
-                <div class="card-body p-0">
-                  <div class="d-flex align-items-center justify-content-between mb-4 px-4 pt-3">
+                <div class="card-body px-4">
+                  <div class="d-flex align-items-center justify-content-between mb-4 pt-1 px-0">
                     <div>
-                      <h3 class="h6 card-title opacity-90 mb-0"><a class="text-nav stretched-link text-decoration-none" href="#">Generate Reports</a></h3>
+                      <h3 class="h6 card-title opacity-90 mb-0"><a class="text-nav text-decoration-none" href="#">Generate Reports</a></h3>
                       <p class="fs-sm fw-bold opacity-70 mb-0">Finance and accounting reports</p>
                     </div>
                     <h3 class="h6 text-primary mb-0">$24,500</h3>
                   </div>
                   <!-- Chart 2 -->
-                  <div class="chart-container mt-3 pt-3 mx-0 px-0">
-                    <canvas id="chartBlue" class="px-0 mx-0"></canvas>
+                  <div class="chart-container mt-3 pt-3">
+                    <canvas id="chartBlue"></canvas>
                   </div>
                 </div>
               </div>
@@ -460,7 +494,7 @@
                 <div class="card-body p-0">
                   <div class="d-flex align-items-center justify-content-between mb-4 px-4 pt-3">
                     <div>
-                      <h3 class="h6 card-title opacity-90 mb-0"><a class="text-nav stretched-link text-decoration-none" href="#">Sales</a></h3>
+                      <h3 class="h6 card-title opacity-90 mb-0"><a class="text-nav text-decoration-none" href="#">Sales</a></h3>
                       <p class="fs-sm fw-bold opacity-70 mb-0">Oct 8 - Oct 26 23</p>
                     </div>
                     <h3 class="h6 text-primary mb-0">$15,300</h3>
@@ -486,7 +520,7 @@
           <div class="col-lg-3 col-md-6 col-sm-4">
             <div class="mb-4 pb-sm-3"><a class="d-inline-block" href="#"><img src="img/logo/Metronics-logo-light.png" width="116" alt="Logo"></a></div>
             <ul class="nav nav-light flex-column">
-              <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal text-light text-nowrap" href="mailto:example@gmail.com"><i class="fi-mail mt-n1 me-1 align-middle text-primary"></i>sample@gmail.com</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal text-light text-nowrap" href="mailto:example@gmail.com"><i class="fi-mail mt-n1 me-1 align-middle text-primary"></i>cs@metronic.com</a></li>
               <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal text-light text-nowrap" href="tel:01111129280"><i class="fi-device-mobile mt-n1 me-1 align-middle text-primary"></i>01111129280</a></li>
             </ul>
           </div>
@@ -513,12 +547,12 @@
           <!-- Subscription form-->
           <div class="col-lg-4 offset-lg-1">
             <h3 class="h4 text-light">Subscribe to our newsletter</h3>
-            <p class="fs-sm mb-4 opacity-60">Don’t miss any relevant vacancies!</p>
+            <p class="fs-sm mb-4 opacity-60">Don’t miss any relevant updates!</p>
             <form class="form-group form-group-light rounded-pill" style="max-width: 500px;">
               <div class="input-group input-group-sm"><span class="input-group-text text-muted"><i class="fi-mail"></i></span>
                 <input class="form-control" type="email" placeholder="Your email">
               </div>
-              <button class="btn btn-info btn-sm rounded-pill" type="button">Subscribe</button>
+              <button class="btn btn-primary btn-sm rounded-pill" type="button">Subscribe</button>
             </form>
           </div>
         </div>
