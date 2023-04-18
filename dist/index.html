@@ -346,7 +346,7 @@
           <div class="row g-2 g-md-4 mt-1">
             
             <!-- First Column -->
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 mb-sm-2">
 
               <!-- Card -->
               <div class="card bg-light shadow-sm card-hover pb-0 mb-0">
@@ -440,8 +440,8 @@
             </div>
 
             <!-- Second Column -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card bg-light shadow-sm card-hover">
+            <div class="col-md-6 col-lg-4 mb-sm-2">
+              <div class="card bg-light shadow-sm card-hover pb-2">
                 <div class="card-body">
                   <div class="d-flex align-items-center justify-content-between mb-5">
                     <div>
@@ -509,8 +509,8 @@
             </div>
 
             <!-- Third Column -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card bg-light shadow-sm card-hover mb-4">
+            <div class="col-md-6 col-lg-4 mb-sm-2">
+              <div class="card bg-light shadow-sm card-hover mb-md-4 mb-sm-3">
                 <div class="card-body px-4">
                   <div class="d-flex align-items-center justify-content-between mb-4 pt-1 px-0">
                     <div>
@@ -577,10 +577,91 @@
                 </div>
               </div>
             </div>
+
+            <!-- Fourth Column -->
+            <div class="col-md-6 col-lg-4 mb-sm-2">
+              <div class="card bg-light shadow-sm card-hover">
+                <div class="card-body px-4">
+                  <div class="d-flex align-items-center justify-content-between mb-4 pt-1 px-0">
+                    <div>
+                      <h3 class="h6 card-title opacity-90 mb-0"><a class="text-nav text-decoration-none" href="#">Sessions By Browser</a></h3>
+                      <p class="fs-sm fw-bold opacity-70 mb-0">Browser sessions reports</p>
+                    </div>
+                    <div class="dropdown content-overlay">
+                      <button type="button" class="btn btn-icon btn-light btn-xs rounded-circle shadow-sm" id="contextMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fi-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu my-1" aria-labelledby="contextMenu">
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <i class="fi-eye-on opacity-60 me-2"></i>
+                            View details
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <i class="fi-refresh opacity-60 me-2"></i>
+                            Refresh stats
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <i class="fi-download-file opacity-60 me-2"></i>
+                            Generate report
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Chart 3 -->
+                  <div id="chartdiv3"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fifth Column -->
+            <div class="col-md-6 col-lg-8 mb-sm-2">
+              <div class="card bg-light shadow-sm card-hover">
+                <div class="card-body px-4">
+                  <div class="d-flex align-items-center justify-content-between mb-4 pt-1 px-0">
+                    <div>
+                      <h3 class="h6 card-title opacity-90 mb-0"><a class="text-nav text-decoration-none" href="#">Users By Country</a></h3>
+                      <p class="fs-sm fw-bold opacity-70 mb-0">Users demographical reports</p>
+                    </div>
+                    <div class="dropdown content-overlay">
+                      <button type="button" class="btn btn-icon btn-light btn-xs rounded-circle shadow-sm" id="contextMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fi-dots-vertical"></i>
+                      </button>
+                      <ul class="dropdown-menu my-1" aria-labelledby="contextMenu">
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <i class="fi-eye-on opacity-60 me-2"></i>
+                            View details
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <i class="fi-refresh opacity-60 me-2"></i>
+                            Refresh stats
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="dropdown-item">
+                            <i class="fi-download-file opacity-60 me-2"></i>
+                            Generate report
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Chart 4 -->
+                  <div id="chartdiv4"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </main>
 
     <!-- Footer-->
@@ -668,9 +749,15 @@
     <script src="vendor/simplebar/dist/simplebar.min.js"></script>
     <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="//cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
     <!-- Main theme script-->
     <script src="js/theme.js"></script>
+    
   </body>
 </html>
 

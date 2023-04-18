@@ -183,4 +183,115 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     },
   });
 
+  /**
+   * AMCharts
+  */
+
+  // PieChart
+
+  // Create root and chart
+  var root = am5.Root.new("chartdiv3");
+
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+
+  var chart = root.container.children.push( 
+    am5percent.PieChart.new(root, {
+      layout: root.horizontalLayout
+    }) 
+  );
+
+  // Define data
+  var data = [{
+    browser: "Chrome",
+    sessions: 160000
+  }, {
+    browser: "Safari",
+    sessions: 120000
+  }, {
+    browser: "Mozilla",
+    sessions: 70000
+  }];
+
+  // Create series
+  var series = chart.series.push(
+    am5percent.PieSeries.new(root, {
+      name: "Series",
+      valueField: "sessions",
+      categoryField: "browser"
+    })
+  );
+  series.data.setAll(data);
+  series.labels.template.set("forceHidden", true);
+  series.ticks.template.set("forceHidden", true);
+
+  // Add legend
+//   var legend = chart.children.push(am5.Legend.new(root, {
+//     centerY: am5.percent(50),
+//     y: am5.percent(50),
+//     layout: root.verticalLayout
+//   }));
+
+//   legend.markerRectangles.template.setAll({
+//     cornerRadiusTL: 10,
+//     cornerRadiusTR: 10,
+//     cornerRadiusBL: 10,
+//     cornerRadiusBR: 10
+//   });
+
+// legend.data.setAll(series.dataItems);
+
+
+  // Map Chart
+
+  // Create root and chart
+  var root = am5.Root.new("chartdiv4"); 
+
+  // Set themes
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+
+  var chart = root.container.children.push(
+    am5map.MapChart.new(root, {
+      panX: "rotateX",
+      projection: am5map.geoNaturalEarth1()
+    })
+  );
+
+  // Create polygon series
+  var polygonSeries = chart.series.push(
+    am5map.MapPolygonSeries.new(root, {
+      geoJSON: am5geodata_worldLow,
+      exclude: ["AQ"]
+    })
+  );
+
+  polygonSeries.mapPolygons.template.setAll({
+    tooltipText: "{name}",
+    templateField: "polygonSettings"
+  });
+
+  polygonSeries.mapPolygons.template.states.create("hover", {
+    fill: am5.color(0x677935)
+  });
+
+  polygonSeries.data.setAll([{
+    id: "US",
+    polygonSettings: {
+      fill: am5.color(0xFF3C38)
+    }
+  }, {
+    id: "CA",
+    polygonSettings: {
+      fill: am5.color(0xA23E48)
+    }
+  }, {
+    id: "MX",
+    polygonSettings: {
+      fill: am5.color(0xFF8C42)
+    }
+  }])
+
 })();

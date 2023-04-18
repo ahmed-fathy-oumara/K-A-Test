@@ -17490,7 +17490,7 @@ _:-ms-lang(x), .jarallax .jarallax-img {
 }
 
 
-/* Timeline */
+/* Vertical Timeline Stylings */
 
 .vertical-timeline {
     width: 100%;
@@ -17580,4 +17580,15 @@ _:-ms-lang(x), .jarallax .jarallax-img {
     content: "";
     display: table;
     clear: both;
+}
+
+/* AMCharts Stylings */
+#chartdiv3 {
+  width: 100%;
+  height: 400px;
+}
+
+#chartdiv4 {
+  width: 100%;
+  height: 60vh;
 }
